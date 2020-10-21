@@ -8,11 +8,6 @@ library(highcharter)
 library(dplyr)
 library(shinythemes)
 
-
-# read data
-covid_19_all <- read_csv(here::here("data/covid-19-all.csv"))
-covid_19_data <- read_csv(here::here("data/covid_19_data.csv"))
-
 # global rate
 covid_19_all <- covid_19_all %>%
   janitor::clean_names() %>%
