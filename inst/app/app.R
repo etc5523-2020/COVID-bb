@@ -12,7 +12,6 @@ library(shinythemes)
 
 
 
-
 # Define Navbar Pages
 
 ui <- navbarPage(
