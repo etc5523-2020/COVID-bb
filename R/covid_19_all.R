@@ -10,7 +10,7 @@
 #' @format
 #' A data frame (tibble) with 679981 observations and 6 variables:
 #'
-#' - *country_region**: The name of the country or region
+#' - **country_region**: The name of the country or region
 #' - **province_state**: The name of the province or state of different countries
 #' - **confirmed**: The confirmed case
 #' - **recovered**: The confirmed case
