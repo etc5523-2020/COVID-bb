@@ -8,38 +8,9 @@ library(highcharter)
 library(dplyr)
 library(shinythemes)
 
-# global rate
-covid_19_all <- covid_19_all %>%
-  janitor::clean_names() %>%
-  drop_na() %>%
-  group_by(country_region,date)
-
-# table data
-covid_19_all <- covid_19_all %>%
-  select(-longitude,-latitude)
-
-# global distribution
-covid_19_data <- covid_19_data %>%
-  janitor::clean_names() %>%
-  filter(!country_region %in% 'Others') %>%
-  group_by(country_region)
 
 
-covid_19_data_new <- covid_19_data %>%
-  select(observation_date, confirmed, recovered, deaths,country_region) %>%
-  group_by(observation_date,country_region) %>%
-  summarise(confirmed = sum(confirmed),
-            recovered = sum(recovered),
-            deaths = sum(deaths)) %>%
-  pivot_longer(cols = confirmed : deaths, names_to = "type", values_to = "count")
 
-covid_19_data_new$`country_region`[covid_19_data_new$`country_region`  == "Mainland China"] = "China"
-covid_19_data_new$`country_region`[covid_19_data_new$`country_region`  == "US"] = "United States of America"
-
-
-data(worldgeojson, package = "highcharter")
-
-covid_19_all$`country_region`[covid_19_all$`country_region`  == "US"] = "United States of America"
 
 
 # Define Navbar Pages
