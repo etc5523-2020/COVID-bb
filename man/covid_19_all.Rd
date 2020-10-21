@@ -7,7 +7,7 @@
 \format{
 A data frame (tibble) with 679981 observations and 6 variables:
 \itemize{
-\item \emph{country_region}*: The name of the country or region
+\item \strong{country_region}: The name of the country or region
 \item \strong{province_state}: The name of the province or state of different countries
 \item \strong{confirmed}: The confirmed case
 \item \strong{recovered}: The confirmed case

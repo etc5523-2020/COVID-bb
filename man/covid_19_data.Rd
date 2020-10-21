@@ -8,7 +8,7 @@
 A data frame (tibble) with 116355 observations and 4 variables:
 \itemize{
 \item \strong{observation_date}: Observation date
-\item \emph{country_region}*: The name of the country or region
+\item \strong{country_region}: The name of the country or region
 \item \strong{type}: The type of the case (confirmed, recovered, deaths)
 \item \strong{count}: The number of daily cases of each type
 }
