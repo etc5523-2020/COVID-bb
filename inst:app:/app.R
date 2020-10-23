@@ -115,9 +115,9 @@ server <- function(input, output, session) {
   output$rate <- renderPlotly({
     covid_19_filter <- covid_19_all %>% filter(province_state == input$province_state)
     ggplot(data = covid_19_filter) +
-      geom_line(data = covid_19_filter, aes(x = date, y = recovered), color = "green") +
-      geom_line(data = covid_19_filter, aes(x = date, y = deaths), color = "red") +
-      geom_line(data = covid_19_filter, aes(x = date, y = confirmed), color = "yellow") +
+      geom_line(data = covid_19_filter, aes(x = obervation_date, y = recovered), color = "green") +
+      geom_line(data = covid_19_filter, aes(x = obervation_date, y = deaths), color = "red") +
+      geom_line(data = covid_19_filter, aes(x = obervation_date, y = confirmed), color = "yellow") +
       ggtitle("Comparing COVID-19 trends across regions globally over time") +
       xlab('Dates') +
       ylab('Cases')

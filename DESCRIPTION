@@ -25,7 +25,8 @@ Imports:
     plotly,
     leaflet,
     highcharter,
-    kableExtra
+    kableExtra,
+    lubridate
 Suggests: 
     knitr,
     rmarkdown,
