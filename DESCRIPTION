@@ -24,7 +24,8 @@ Imports:
     ggplot2,
     plotly,
     leaflet,
-    highcharter
+    highcharter,
+    kableExtra
 Suggests: 
     knitr,
     rmarkdown,
