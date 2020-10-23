@@ -3,11 +3,10 @@
 #' @description
 #' Function `table_filter()` can create a table after filtering of daily cases of COVID-19
 #'
-#' @param
-#' data: The data used to create the table
-#' country: The country that you want to exlpore
-#' type: The type of the case
-#' date: THe date used to observe
+#' @param data  The data used to create the table
+#' @param country  The country that you want to exlpore
+#' @param type  The type of the case
+#' @param date  THe date used to observe
 #'
 #'@import dplyr
 #'
@@ -19,7 +18,6 @@
 #' @return A table after filtering of daily cases of COVID-19
 #'
 #' @export
-#'
 table_filter <- function(data, country, type, date){
 
   data <- data %>%

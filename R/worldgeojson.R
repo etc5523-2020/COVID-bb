@@ -16,6 +16,6 @@
 #' data(covid_19_all)
 #'
 #' @source
-#' This data comes from [highcharter v0.8.2]<https://code.highcharts.com/mapdata/custom/world.js >
+#' This data comes from 'highcharter v0.8.2' <https://code.highcharts.com/mapdata/custom/world.js >
 #'
 "worldgeojson"

@@ -7,10 +7,13 @@
 table_filter(data, country, type, date)
 }
 \arguments{
-\item{data:}{The data used to create the table
-country: The country that you want to exlpore
-type: The type of the case
-date: THe date used to observe}
+\item{data}{The data used to create the table}
+
+\item{country}{The country that you want to exlpore}
+
+\item{type}{The type of the case}
+
+\item{date}{THe date used to observe}
 }
 \value{
 A table after filtering of daily cases of COVID-19

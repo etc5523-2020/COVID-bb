@@ -14,7 +14,7 @@ A data frame (tibble) with 116355 observations and 4 variables:
 }
 }
 \source{
-This data comes from \link{World Health Organization}\url{https://www.who.int/emergencies/diseases/novel-coronavirus-2019}
+This data comes from 'World Health Organization' \url{https://www.who.int/emergencies/diseases/novel-coronavirus-2019}
 }
 \usage{
 covid_19_data

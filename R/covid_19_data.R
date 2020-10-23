@@ -22,6 +22,6 @@
 #' data(covid_19_data)
 #'
 #' @source
-#' This data comes from [World Health Organization]<https://www.who.int/emergencies/diseases/novel-coronavirus-2019>
+#' This data comes from 'World Health Organization' <https://www.who.int/emergencies/diseases/novel-coronavirus-2019>
 #'
 "covid_19_data"

@@ -16,7 +16,7 @@ A data frame (tibble) with 679981 observations and 6 variables:
 }
 }
 \source{
-This data comes from \link{COVID19 Daily Updates}\url{https://www.kaggle.com/gpreda/coronavirus-2019ncov}
+This data comes from 'COVID19 Daily Updates' \url{https://www.kaggle.com/gpreda/coronavirus-2019ncov}
 }
 \usage{
 covid_19_all

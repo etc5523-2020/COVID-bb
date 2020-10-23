@@ -8,7 +8,7 @@
 A list in geojson format
 }
 \source{
-This data comes from \link{highcharter v0.8.2}<https://code.highcharts.com/mapdata/custom/world.js >
+This data comes from 'highcharter v0.8.2' <https://code.highcharts.com/mapdata/custom/world.js >
 }
 \usage{
 worldgeojson

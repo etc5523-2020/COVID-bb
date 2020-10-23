@@ -24,6 +24,6 @@
 #' data(covid_19_all)
 #'
 #' @source
-#' This data comes from [COVID19 Daily Updates]<https://www.kaggle.com/gpreda/coronavirus-2019ncov>
+#' This data comes from 'COVID19 Daily Updates' <https://www.kaggle.com/gpreda/coronavirus-2019ncov>
 #'
 "covid_19_all"

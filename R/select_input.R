@@ -3,11 +3,10 @@
 #' @description
 #' Function `select_input()` can help users select input object within the Shiny Application
 #'
-#' @param
-#' inputId: The ID of the input object
-#' label: The text label set for the input object
-#' choices: List of values to select from
-#' selected: The default selected option
+#' @param inputId The ID of the input object
+#' @param label  The text label set for the input object
+#' @param choices  List of values to select from
+#' @param selected  The default selected option
 #'
 #'@import shiny
 #'
@@ -19,7 +18,6 @@
 #' @return A shiny selected-input sidebar
 #'
 #' @export
-#'
 select_input <- function(inputId,label,choices,selected){
 
   shiny::selectInput(

@@ -7,10 +7,13 @@
 select_input(inputId, label, choices, selected)
 }
 \arguments{
-\item{inputId:}{The ID of the input object
-label: The text label set for the input object
-choices: List of values to select from
-selected: The default selected option}
+\item{inputId}{The ID of the input object}
+
+\item{label}{The text label set for the input object}
+
+\item{choices}{List of values to select from}
+
+\item{selected}{The default selected option}
 }
 \value{
 A shiny selected-input sidebar
