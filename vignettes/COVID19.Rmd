@@ -1,0 +1,96 @@
+---
+title: "COVID-19 Global Analysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{COVID-19 Global Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 8.5,
+  fig.height = 7
+)
+```
+
+# Introduction
+
+## Aim of the app
+This vignette is used to introduce the COVID-19 Global Analysis Shiny Application, the way to launch the app and the guidelines for it use. 
+As for the shiny app, it is intended to be used as an intuitive and easy-to-understand visualization tool for COVID-19 research, users can observe the total distribution of confirmed cases, death cases and recovered cases around the world by selecting the type of the distribution they want to view, as well as exploring the trends of mortality, diagnosis recovered counts among provinces or states of different countries all over the world
+
+## Installation
+First, we need to install the package `COVID19bb` from the github.
+```{r setup, eval=FALSE}
+install.packages("devtools")
+devtools::install_github("https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259")
+```
+
+# Launch the app
+
+After installing the required packages, users can use `r launch_app()` to launch the app.
+```{r，include=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(shiny)
+library(plotly)
+library(leaflet)
+library(DT)
+library(highcharter)
+library(dplyr)
+library(shinythemes)
+```
+
+```{r launchapp, eval=FALSE}
+launch_app()
+```
+
+# Guidelines for use
+
+## Exploring the Distribution of cases by type
+
+`COVID19bb` package provides a highchart map to show the distribution of confirmed cases, recovered cases and the deaths cases of COVID-19. Meanwhile, it also contains the relevant dataset `covid_19_data`, which is from [World Health Organization]<https://www.who.int/emergencies/diseases/novel-coronavirus-2019> and covers 222 countries or regions, from 2020-01-22 to 2020-09-24.
+Users can select the type pf the case (confirmed, recovered and deaths) and then get a world distribution map of COVID-19 to have a general view of this epidemic.
+
+```{r dismap, echo=FALSE, warning=FALSE}
+    highchart() %>%
+      hc_add_series_map(worldgeojson, covid_19_data, value = 'count', joinBy = c('name','country_region'))  %>%
+      #hc_colors(c("darkorange", "darkgray")) %>%
+      hc_colorAxis(stops = color_stops()) %>%
+      hc_title(text = "Countries with COVID-19 exposure") %>%
+      hc_subtitle(text = 'with Total Cases -  Figures')
+```
+
+## Exploration of case trend among regions over time
+
+`COVID19bb` package provides a interactive line chart to show the COVID-19 case trend among regions over time. Meanwhile, it also contains the relevant dataset `covid_19_all`, which is from [COVID19 Daily Updates]<https://www.kaggle.com/gpreda/coronavirus-2019ncov> and covers 215 countries or regions, from 2020-01-22 to 2020-10-03.
+Users can select the name of the state or province in different countries and then get a interactive line chart, which consists of three lines (red for confirmed, green for recovered and black for deaths).
+
+```{r trend, echo=FALSE, warning=FALSE}
+    ggplot(data = covid_19_all) +
+      geom_line(data = covid_19_all, aes(x = date, y = recovered), color = "green") +
+      geom_line(data = covid_19_all, aes(x = date, y = deaths), color = "red") +
+      geom_line(data = covid_19_all, aes(x = date, y = confirmed), color = "yellow") +
+      ggtitle("Comparing COVID-19 trends across regions globally over time") +
+      xlab('Dates') +
+      ylab('Cases')
+```
+
+## Exploring the specific case in table
+
+`COVID19bb` package provides a interactive DT table to show the detailed information of COVID-19 case.
+Users can input the country name or the date, and even the type of the case, the results will show in a this table, in this way, users can get more specific data about the condition.
+
+```{r table, echo=FALSE, warning=FALSE}
+DT::datatable(covid_19_all)
+```
+
+## Functions
+
+There are two functions in this package:
+
+- Function `select_input()` can help users select input object within the Shiny Application.
+- Function `distribution_map()` can create a distribution map of desired objects.
