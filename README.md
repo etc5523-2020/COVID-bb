@@ -29,9 +29,10 @@ The package consists of three datasets:
 
 And there are three functions:
 
-  - `ui_input` : help users select input object within the Shiny
+  - `select_input` : help users select input object within the Shiny
     Application.
-  - `server_output` : create a distribution map of desired objects.
+  - `table_filter` : create a table after filtering with daily cases of
+    COVID-19.
   - `launch_app` : launch the COVID-19 Global Analysis Shiny Application
     from the `COVID19bb` package.
 
