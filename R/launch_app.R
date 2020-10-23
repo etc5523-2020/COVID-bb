@@ -15,8 +15,8 @@
 #'
 #' @export
 launch_app <- function(){
-  appAddr <- system.file("app", "app.R", package = "COVID19bb")
-  if(appAddr == ""){
+  appDir <- system.file("inst:app:", package = "COVID19bb")
+  if(appDir == ""){
     stop("Could not find example directory. Try re-installing `COVID19bb` package.")
   }
 

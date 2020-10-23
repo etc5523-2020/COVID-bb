@@ -11,8 +11,8 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.width = 8.5,
-  fig.height = 7
+  fig.width = 9,
+  fig.height = 7.5
 )
 ```
 
@@ -30,9 +30,9 @@ devtools::install_github("https://github.com/etc5523-2020/r-package-assessment-Y
 ```
 
 # Launch the app
-
-After installing the required packages, users can use `r launch_app()` to launch the app.
-```{r，include=FALSE}
+After installing the required packages, users can use launch function to launch the app.
+```{r, include=FALSE}
+library(COVID19bb)
 library(tidyverse)
 library(ggplot2)
 library(shiny)
@@ -54,10 +54,12 @@ launch_app()
 
 `COVID19bb` package provides a highchart map to show the distribution of confirmed cases, recovered cases and the deaths cases of COVID-19. Meanwhile, it also contains the relevant dataset `covid_19_data`, which is from [World Health Organization]<https://www.who.int/emergencies/diseases/novel-coronavirus-2019> and covers 222 countries or regions, from 2020-01-22 to 2020-09-24.
 Users can select the type pf the case (confirmed, recovered and deaths) and then get a world distribution map of COVID-19 to have a general view of this epidemic.
-
+Here is the example of distribution of confirmed cases.
 ```{r dismap, echo=FALSE, warning=FALSE}
+covid_19_data_filter <- covid_19_data %>% filter(type == "confirmed")
+
     highchart() %>%
-      hc_add_series_map(worldgeojson, covid_19_data, value = 'count', joinBy = c('name','country_region'))  %>%
+      hc_add_series_map(worldgeojson, covid_19_data_filter, value = 'count', joinBy = c('name','country_region'))  %>%
       #hc_colors(c("darkorange", "darkgray")) %>%
       hc_colorAxis(stops = color_stops()) %>%
       hc_title(text = "Countries with COVID-19 exposure") %>%
@@ -67,16 +69,18 @@ Users can select the type pf the case (confirmed, recovered and deaths) and then
 ## Exploration of case trend among regions over time
 
 `COVID19bb` package provides a interactive line chart to show the COVID-19 case trend among regions over time. Meanwhile, it also contains the relevant dataset `covid_19_all`, which is from [COVID19 Daily Updates]<https://www.kaggle.com/gpreda/coronavirus-2019ncov> and covers 215 countries or regions, from 2020-01-22 to 2020-10-03.
-Users can select the name of the state or province in different countries and then get a interactive line chart, which consists of three lines (red for confirmed, green for recovered and black for deaths).
-
+Users can select the name of the state or province in different countries and then get a interactive line chart, which consists of three lines (red for confirmed, green for recovered and black for deaths). Here
+Here is the example of Hubei province in China.
 ```{r trend, echo=FALSE, warning=FALSE}
-    ggplot(data = covid_19_all) +
-      geom_line(data = covid_19_all, aes(x = date, y = recovered), color = "green") +
-      geom_line(data = covid_19_all, aes(x = date, y = deaths), color = "red") +
-      geom_line(data = covid_19_all, aes(x = date, y = confirmed), color = "yellow") +
+covid_19_all_4 <- covid_19_all %>% filter(province_state == "Hubei")
+
+    ggplot(data = covid_19_all_4) +
+      geom_line(data = covid_19_all_4, aes(x = date, y = recovered), color = "green") +
+      geom_line(data = covid_19_all_4, aes(x = date, y = deaths), color = "red") +
+      geom_line(data = covid_19_all_4, aes(x = date, y = confirmed), color = "yellow") +
       ggtitle("Comparing COVID-19 trends across regions globally over time") +
       xlab('Dates') +
-      ylab('Cases')
+      ylab('Cases') 
 ```
 
 ## Exploring the specific case in table
@@ -85,7 +89,12 @@ Users can select the name of the state or province in different countries and th
 Users can input the country name or the date, and even the type of the case, the results will show in a this table, in this way, users can get more specific data about the condition.
 
 ```{r table, echo=FALSE, warning=FALSE}
-DT::datatable(covid_19_all)
+covid_19_all %>%
+  head(20) %>% 
+  kableExtra::kable(align = 'lrrrrrr',caption = "Detailed information on COVID-19 cases") %>% 
+   kableExtra::kable_styling(
+     font_size = 15,
+     bootstrap_options = c("striped", "hover", "condensed")) 
 ```
 
 ## Functions

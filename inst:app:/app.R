@@ -7,7 +7,7 @@ library(DT)
 library(highcharter)
 library(dplyr)
 library(shinythemes)
-
+library(COVID19bb)
 
 
 
@@ -26,9 +26,9 @@ ui <- navbarPage(
         selectInput(
           inputId = 'type',
           label = "Which type to explore?",
-          choices = sort(unique(covid_19_data_new$type)),
+          choices = sort(unique(covid_19_data$type)),
           # choose seventh option as default selected
-          selected = sort(unique(covid_19_data_new$type))[1]
+          selected = sort(unique(covid_19_data$type))[1]
         ),
         textOutput(outputId = 'explain_region'),
         width = 4 # set the width of sidebar part
@@ -148,7 +148,7 @@ server <- function(input, output, session) {
   })
 
   output$map <- renderHighchart({
-    covid_19_data_filter <- covid_19_data_new %>% filter(type == input$type)
+    covid_19_data_filter <- covid_19_data %>% filter(type == input$type)
     highchart() %>%
       hc_add_series_map(worldgeojson, covid_19_data_filter, value = 'count', joinBy = c('name','country_region'))  %>%
       #hc_colors(c("darkorange", "darkgray")) %>%
