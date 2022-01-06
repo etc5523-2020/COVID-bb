@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">COVID19bb</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
       </span>
     </div>
 
@@ -40,25 +42,10 @@
 <li>
   <a href="articles/COVID.html">Get started</a>
 </li>
-<li>
-  <a href="reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="articles/COVID19.html">COVID-19 Global Analysis</a>
-    </li>
-  </ul>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259">
+  <a href="https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259" class="external-link">
     <span class="fa fa-github"></span>
      
   </a>
@@ -75,14 +62,14 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="covid19bb" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#covid19bb" class="anchor"></a>COVID19bb</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="covid19bb">COVID19bb<a class="anchor" aria-label="anchor" href="#covid19bb"></a>
+</h1></div>
 <!-- badges: start -->
 
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h2>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
 <p>The goal of <code>COVID19bb</code> package, which is created by Yiwen Zhang, is to provide the relevant datasets and functions to run the COVID-19 Global Analysis Shiny Application. And the aim of the COVID-19 Global Analysis Shiny Application is to provide a concise and visual appealing way to explore the epidemic condition of the COVID-19.</p>
 <p>The package consists of three datasets:</p>
 <ul>
@@ -103,36 +90,36 @@
 <code>launch_app</code> : launch the COVID-19 Global Analysis Shiny Application from the <code>COVID19bb</code> package.</li>
 </ul>
 </div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <!--You can install the released version of COVID19bb from [CRAN](https://CRAN.R-project.org) with: -->
 <!-- ``` r -->
 <!-- install.packages("COVID19bb") -->
 <!--  ```  -->
-<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"etc5523-2020/r-package-assessment-Yiwen-Zhang-259"</span><span class="op">)</span></pre></div>
-<div id="launch-the-app" class="section level3">
-<h3 class="hasAnchor">
-<a href="#launch-the-app" class="anchor"></a>Launch the app</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="reference/launch_app.html">launch_app</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"etc5523-2020/r-package-assessment-Yiwen-Zhang-259"</span><span class="op">)</span></code></pre></div>
+<div class="section level3">
+<h3 id="launch-the-app">Launch the app<a class="anchor" aria-label="anchor" href="#launch-the-app"></a>
+</h3>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/launch_app.html">launch_app</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="shiny-application-user-interface" class="section level3">
-<h3 class="hasAnchor">
-<a href="#shiny-application-user-interface" class="anchor"></a>Shiny Application User Interface</h3>
+<div class="section level3">
+<h3 id="shiny-application-user-interface">Shiny Application User Interface<a class="anchor" aria-label="anchor" href="#shiny-application-user-interface"></a>
+</h3>
 <p>Here are the UI of three main subpages:</p>
 <p><img src="reference/figures/distribution.jpeg" alt="Distribution"><img src="reference/figures/trend.jpeg" alt="Trend"><img src="reference/figures/table.jpeg" alt="Table"></p>
 </div>
 </div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<div id="the-dataset-in-package" class="section level3">
-<h3 class="hasAnchor">
-<a href="#the-dataset-in-package" class="anchor"></a>The dataset in package</h3>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<div class="section level3">
+<h3 id="the-dataset-in-package">The dataset in package<a class="anchor" aria-label="anchor" href="#the-dataset-in-package"></a>
+</h3>
 <p>This is a basic example which shows you the first five lines in <code>covid_19_all</code> data in this package:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#&gt; Registered S3 method overwritten by 'quantmod':</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt;   method            from</span></span>
@@ -265,25 +252,22 @@
 </tbody>
 </table>
 </div>
-<div id="the-case-trend-in-hubei-province" class="section level3">
-<h3 class="hasAnchor">
-<a href="#the-case-trend-in-hubei-province" class="anchor"></a>The case trend in Hubei province</h3>
+<div class="section level3">
+<h3 id="the-case-trend-in-hubei-province">The case trend in Hubei province<a class="anchor" aria-label="anchor" href="#the-case-trend-in-hubei-province"></a>
+</h3>
 <p>This is a basic example which shows you how to explore the case trend of COVID-19 in the whole world.</p>
 <p><img src="reference/figures/README-trend-1.png" width="100%"></p>
 </div>
 </div>
-<div id="data-source" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data-source" class="anchor"></a>Data Source</h2>
+<div class="section level2">
+<h2 id="data-source">Data Source<a class="anchor" aria-label="anchor" href="#data-source"></a>
+</h2>
 <p>The dataset in this package is from:</p>
 <ul>
-<li>
-<br><span class="math display"><em>h</em><em>i</em><em>g</em><em>h</em><em>c</em><em>h</em><em>a</em><em>r</em><em>t</em><em>e</em><em>r</em><em>v</em>0.8.2</span><br>&lt;<a href="https://code.highcharts.com/mapdata/custom/world.js" class="uri">https://code.highcharts.com/mapdata/custom/world.js</a> &gt;</li>
-<li>
-<br><span class="math display"><em>W</em><em>o</em><em>r</em><em>l</em><em>d</em><em>H</em><em>e</em><em>a</em><em>l</em><em>t</em><em>h</em><em>O</em><em>r</em><em>g</em><em>a</em><em>n</em><em>i</em><em>z</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em></span><br><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="uri">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a>
+<li>[highcharter v0.8.2]&lt;<a href="https://code.highcharts.com/mapdata/custom/world.js" class="external-link uri">https://code.highcharts.com/mapdata/custom/world.js</a> &gt;</li>
+<li>[World Health Organization]<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="external-link uri">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a>
 </li>
-<li>
-<br><span class="math display"><em>C</em><em>O</em><em>V</em><em>I</em><em>D</em>19<em>D</em><em>a</em><em>i</em><em>l</em><em>y</em><em>U</em><em>p</em><em>d</em><em>a</em><em>t</em><em>e</em><em>s</em></span><br><a href="https://www.kaggle.com/gpreda/coronavirus-2019ncov" class="uri">https://www.kaggle.com/gpreda/coronavirus-2019ncov</a>
+<li>[COVID19 Daily Updates]<a href="https://www.kaggle.com/gpreda/coronavirus-2019ncov" class="external-link uri">https://www.kaggle.com/gpreda/coronavirus-2019ncov</a>
 </li>
 </ul>
 </div>
@@ -292,36 +276,48 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></small></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>Yiwen Zhang <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><small><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></small></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259/actions"><img src="https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
+<li><a href="authors.html#citation">Citing COVID19bb</a></li>
 </ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Yiwen Zhang <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
 </div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259/actions" class="external-link"><img src="https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Yiwen Zhang.</p>
+  <p></p>
+<p>Developed by Yiwen Zhang.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -329,6 +325,8 @@
 
   
 
+
+  
 
   </body>
 </html>
