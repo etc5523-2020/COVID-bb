@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-![logo](man/figures/covid-bb.jpeg)# COVID19bb
+# COVID19bb
 
 <!-- badges: start -->
 
