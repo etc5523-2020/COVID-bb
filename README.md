@@ -11,7 +11,7 @@ status](https://github.com/etc5523-2020/r-package-assessment-Yiwen-Zhang-259/wor
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
 
-![logo](man/figures/logo.png){#id .class width=30 height=20px}
+![logo](man/figures/logo.png){width=30 height=20px}
 
 ## Introduction
 
