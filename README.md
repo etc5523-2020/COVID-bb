@@ -52,7 +52,7 @@ And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("etc5523-2020/r-package-assessment-Yiwen-Zhang-259")
+devtools::install_github("etc5523-2020/COVID-")
 ```
 
 ### Launch the app
