@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# COVID-bb
+# COVID19bb
 
 <!-- badges: start -->
 
@@ -15,7 +15,7 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 
 ## Introduction
 
-The goal of `COVID-bb` package, which is created by Yiwen Zhang, is to
+The goal of `COVID19bb` package, which is created by Yiwen Zhang, is to
 provide the relevant datasets and functions to run the COVID-19 Global
 Analysis Shiny Application. And the aim of the COVID-19 Global Analysis
 Shiny Application is to provide a concise and visual appealing way to
